@@ -46,7 +46,7 @@ export default function App() {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/predict", {
+      const response = await fetch("https://house-price-backend.vercel.app/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
