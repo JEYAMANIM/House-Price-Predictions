@@ -1,0 +1,13 @@
+{
+  "name": "house-price-predictions",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npm --prefix frontend/frontend install && npm --prefix frontend/frontend run build && node copy-dist.js",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.128.0"
+  }
+}
