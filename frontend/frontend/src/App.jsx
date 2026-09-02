@@ -46,7 +46,8 @@ export default function App() {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/predict", {
+      const apiBase = import.meta.env.VITE_API_URL || (window.location.port === "5173" ? "http://localhost:8000" : "");
+      const response = await fetch(`${apiBase}/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
